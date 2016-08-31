@@ -1,5 +1,4 @@
-angular.module('widget', ['ngRoute']);
-angular.module('widget')
+angular.module('widget', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
 	$routeProvider
 	.when('/', {
@@ -49,4 +48,4 @@ angular.module('widget')
 		templateUrl:'templates/create-widget.html',
 		controller: 'addWidgetCtrl'
 	});
-}])
+}]);

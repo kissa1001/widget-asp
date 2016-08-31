@@ -1,12 +1,13 @@
 angular.module("widget")
-.service("APIservice",["$http",function($http){
+.service("APIservice", ["$http",function($http){
 	this.users = [];
 	this.widgets = [];
 	var thisSer = this;
 	var url = "http://spa.tglrw.com:4000"
 
 	this.getUsers = function(){
-		return $http.get(url + "/users").success(function(data){
+		return $http.get(url + "/users")
+		.success(function(data){
 			angular.copy(data, thisSer.users);
 		});
 	};
@@ -19,7 +20,8 @@ angular.module("widget")
 	};
 
 	this.getWidgets = function(){
-		return $http.get(url + "/widgets").success(function(data){
+		return $http.get(url + "/widgets")
+		.success(function(data){
 			angular.copy(data, thisSer.widgets);
 		});
 	};
@@ -32,13 +34,15 @@ angular.module("widget")
 	};
 
 	this.createWidget = function(widget){
-		return $http.post(url + '/widgets', widget).success(function(data){
+		return $http.post(url + '/widgets', widget)
+		.success(function(data){
 			thisSer.widgets.push(data);
 		});
 	};
 
 	this.editWidget = function(widget){
-		return $http.put(url + '/widgets/' + widget.id, widget).success(function(data){
+		return $http.put(url + '/widgets/' + widget.id, widget)
+		.success(function(data){
 			return data;
 		});
 	};

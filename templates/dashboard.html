@@ -1,49 +1,46 @@
-<!-- Dashboard Boxes -->
-<div class="row">
-  <div class="col-lg-3 col-md-6 col-xs-12">
-    <div class="widget">
-      <div class="widget-header">
-        <div class="widget-icon green pull-left">
-          <i class="fa fa-users"></i>
+<div class = "row">
+  <div class = "col-lg-3 col-md-6 col-xs-12">
+    <div class = "widget">
+      <div class = "widget-header">
+        <div class = "widget-icon green pull-left">
+          <i class = "fa fa-users"></i>
         </div>
-        <div class="title">{{num_users}}</div>
-        <div class="comment">Users</div>
+        <div class = "title">{{num_users}}</div>
+        <div class = "comment">Users</div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6 col-xs-12">
-    <div class="widget">
-      <div class="widget-header">
-        <div class="widget-icon green pull-left">
-          <i class="fa fa-users"></i>
+  <div class = "col-lg-3 col-md-6 col-xs-12">
+    <div class = "widget">
+      <div class = "widget-header">
+        <div class = "widget-icon green pull-left">
+          <i class = "fa fa-users"></i>
         </div>
-        <div class="title">{{num_widgets}}</div>
-        <div class="comment">Widgets</div>
+        <div class = "title">{{num_widgets}}</div>
+        <div class = "comment">Widgets</div>
       </div>
     </div>
   </div>
 </div>
-
 <!-- Tables -->
-<div class="row">
-
+<div class = "row">
   <!-- Users listing -->
-  <div class="col-lg-6">
-    <div class="widget">
-      <div class="widget-header">Users
-        <div class="pull-right"><input type="text" class="form-control input-sm" placeholder="Enter user name" ng-model="search.userName"></div>
+  <div class = "col-lg-6">
+    <div class = "widget">
+      <div class = "widget-header">Users
+        <div class = "pull-right"><input type = "text" class = "form-control input-sm" placeholder = "Enter user name" ng-model = "search.userName"></div>
       </div>
-      <div class="table-responsive">
-        <table class="table">
+      <div class = "table-responsive">
+        <table class = "table">
           <thead>
             <tr>
-              <th class="text-center">ID</th>
+              <th class = "text-center">ID</th>
               <th>Name</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat = "user in users | filter:search.userName" ng-click="userDetail(user)" class="table-row">
-              <td class="text-center">{{user.id}}</td>
+            <tr ng-repeat  =  "user in users | filter:search.userName" ng-click = "userDetail(user)" class = "table-row">
+              <td class = "text-center">{{user.id}}</td>
               <td>{{user.name}}</td>
             </tr>
           </tbody>
@@ -53,22 +50,22 @@
   </div><!-- End Users -->
 
   <!-- Widget listing -->
-  <div class="col-lg-6">
-    <div class="widget">
-      <div class="widget-header">Widgets
-        <div class="pull-right"><input type="text" class="form-control input-sm" placeholder="Enter widget name" ng-model="search.widgetName"></div>
+  <div class = "col-lg-6">
+    <div class = "widget">
+      <div class = "widget-header">Widgets
+        <div class = "pull-right"><input type = "text" class = "form-control input-sm" placeholder = "Enter widget name" ng-model = "search.widgetName"></div>
       </div>
-      <div class="table-responsive">
-        <table class="table">
+      <div class = "table-responsive">
+        <table class = "table">
           <thead>
             <tr>
-              <th class="text-center">ID</th>
+              <th class = "text-center">ID</th>
               <th>Name</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat = "widget in widgets | filter:search.widgetName" ng-click="widgetDetail(widget)" class="table-row">
-              <td class="text-center">{{widget.id}}</td>
+            <tr ng-repeat  =  "widget in widgets | filter:search.widgetName" ng-click = "widgetDetail(widget)" class = "table-row">
+              <td class = "text-center">{{widget.id}}</td>
               <td>{{widget.name}}</td>
             </tr>
           </tbody>
@@ -76,5 +73,4 @@
       </div>
     </div>
   </div><!-- End Widgets -->
-
 </div><!-- End Tables -->

@@ -1,33 +1,27 @@
-<!-- Create/Edit -->
-<div class="row">
-
+<div class = "row">
   <!-- Widget listing -->
-  <div class="col-lg-12">
-    <div class="widget">
-      <div class="widget-header">Create Widget</div>
-      <div class="widget-body">
-        <form class="form-horizontal" ng-submit="addWidget()">
-
+  <div class = "col-lg-12">
+    <div class = "widget">
+      <div class = "widget-header">Create Widget</div>
+      <div class = "widget-body">
+        <form class = "form-horizontal" ng-submit = "addWidget()">
           <legend>Create Widget</legend>
-
           <!-- Name-->
-          <div class="controls" style="padding-top: 10px">
-            Name:
-            <input id="widget-name" class="form-control" name="widget-name" type="text" placeholder="foo-bar" class="input-medium" ng-model="name" required>
+          <div class = "controls" style = "padding-top: 10px">
+            <label for = "widget-name">Name:</label>
+            <input id = "widget-name" class = "form-control" name = "widget-name" type = "text" placeholder = "foo-bar" class = "input-medium" ng-model = "name" required>
           </div>
-
           <!-- Price -->
-          <div class="controls" style="padding-top: 10px">
-            <div class="input-prepend">
-              Price:
-              <input id="widget-price" class="form-control" name="widget-price" class="input-medium" placeholder="$0.00" type="number" ng-model="price" required>
+          <div class = "controls" style = "padding-top: 10px">
+            <div class = "input-prepend">
+              <label for = "widget-price">Price:</label>
+              <input id = "widget-price" class = "form-control" name = "widget-price" class = "input-medium" placeholder = "$0.00" type = "number" ng-model = "price" required>
             </div>
           </div>
-
           <!-- Color -->
-          <div class="controls" style="padding-top: 10px">
-            Color:
-            <select id="widget-color" name="widget-color" class="input-large form-control" ng-model="color" required>
+          <div class = "controls" style = "padding-top: 10px">
+            <label for = "widget-color">Color:</label>
+            <select id = "widget-color" name = "widget-color" class = "input-large form-control" ng-model = "color" required>
               <option>red</option>
               <option>purple</option>
               <option>black</option>
@@ -37,25 +31,22 @@
               <option>depends on the viewing angle</option>
             </select>
           </div>
-
           <!-- Melts -->
-          <div class="controls" style="padding-top: 10px">
-            Melts:
-            <input type="checkbox" name="widget-properties" id="widget-properties-0" value="melts" ng-model="melts" required>
+          <div class = "controls" style = "padding-top: 10px">
+            <label>Melts:
+            <input type = "checkbox" name = "widget-properties" id = "widget-properties-0" value = "melts" ng-model = "melts" required></label>
           </div>
-
           <!-- Inventory -->
-          <div class="controls" style="padding-top: 10px">
-            Inventory:
-            <input id="widget-count" class="form-control" name="widget-count" type="number" placeholder="#?" class="input-small" ng-model="inventory" required>
+          <div class = "controls" style = "padding-top: 10px">
+            <label for = "widget-count">Inventory:</label>
+            <input id = "widget-count" class = "form-control" name = "widget-count" type = "number" placeholder = "#?" class = "input-small" ng-model = "inventory" required>
           </div>
-          <button class="btn btn-md btn-info" style="margin-top: 20px;">Submit</button>
+          <button class = "btn btn-md btn-info" style = "margin-top: 20px;">Submit</button>
         </form>
-        <div class="alert alert-success" ng-show="created" style="margin-top: 20px;">
+        <div class = "alert alert-success" ng-show = "created" style = "margin-top: 20px;">
           <strong>Awesome!</strong> You've successfuly created a new widget. <br>
-          You can find it <a ng-href="#/widgets">here:)</a>
+          You can find it <a ng-href = "#/widgets">here:)</a>
         </div>
-
       </div><!-- End Widget body -->
     </div><!-- End Widget -->
   </div><!-- End Column -->
